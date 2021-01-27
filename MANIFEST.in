@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include alqlab_customization *.css
+recursive-include alqlab_customization *.csv
+recursive-include alqlab_customization *.html
+recursive-include alqlab_customization *.ico
+recursive-include alqlab_customization *.js
+recursive-include alqlab_customization *.json
+recursive-include alqlab_customization *.md
+recursive-include alqlab_customization *.png
+recursive-include alqlab_customization *.py
+recursive-include alqlab_customization *.svg
+recursive-include alqlab_customization *.txt
+recursive-exclude alqlab_customization *.pyc
