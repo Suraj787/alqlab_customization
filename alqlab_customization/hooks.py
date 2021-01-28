@@ -10,6 +10,7 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "suraj@bizmap.in"
 app_license = "MIT"
+app_logo_url = '/assets/alqlab_customization/images/forPR.png'
 
 # Includes in <head>
 # ------------------
