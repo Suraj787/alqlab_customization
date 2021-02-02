@@ -3,8 +3,15 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-# import frappe
+import frappe
 from frappe.model.document import Document
 
 class MaterialOrder(Document):
-	pass
+	def on_submit(self):
+		if self.purchaser:
+			todo=frappe.new_doc('ToDo')
+			todo.description=self.material_request_type
+			todo.reference_type='Material Order'
+			todo.reference_name=self.name
+			todo.owner=self.purchaser
+			todo.save()
