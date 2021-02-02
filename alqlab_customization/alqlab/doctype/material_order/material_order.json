@@ -15,8 +15,8 @@
   "branch",
   "column_break_2",
   "schedule_date",
-  "company",
   "purchaser",
+  "company",
   "items_section",
   "order_itemsl",
   "more_info",
@@ -236,12 +236,6 @@
    "options": "Branch"
   },
   {
-   "fieldname": "purchaser",
-   "fieldtype": "Link",
-   "label": "Purchaser",
-   "options": "Supplier"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -249,11 +243,17 @@
    "options": "Material Order",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "purchaser",
+   "fieldtype": "Link",
+   "label": "Purchaser ",
+   "options": "User"
   }
  ],
  "icon": "fa fa-ticket",
  "is_submittable": 1,
- "modified": "2021-01-25 10:56:31.238906",
+ "modified": "2021-02-01 22:39:26.731119",
  "modified_by": "Administrator",
  "module": "alqlab",
  "name": "Material Order",
