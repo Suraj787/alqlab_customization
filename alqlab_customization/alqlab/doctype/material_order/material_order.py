@@ -5,6 +5,7 @@
 from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
+from frappe.model.mapper import get_mapped_doc
 
 class MaterialOrder(Document):
 	def on_submit(self):
@@ -15,3 +16,25 @@ class MaterialOrder(Document):
 			todo.reference_name=self.name
 			todo.owner=self.purchaser
 			todo.save()
+
+
+@frappe.whitelist()
+def make_purchase_order(source_name, target_doc=None):
+
+	doclist = get_mapped_doc("Material Order", source_name, 	{
+		"Material Order": {
+			"doctype": "Purchase Order",
+		},
+	}, target_doc)
+
+	return doclist
+
+@frappe.whitelist()
+def make_supplier_quotation(source_name, target_doc=None):
+	doclist = get_mapped_doc("Material Order", source_name, {
+		"Material Order": {
+			"doctype": "Supplier Quotation",
+		}
+	}, target_doc)
+
+	return doclist
