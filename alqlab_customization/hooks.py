@@ -34,7 +34,13 @@ app_logo_url = '/assets/alqlab_customization/images/forPR.png'
 
 # Home Pages
 # ----------
-
+ scheduler_events = {
+    "cron": {
+        "* * * * *": [
+            "frappe.email.queue.flush"
+        ]
+    }
+}
 # application home page (will override Website Settings)
 # home_page = "login"
 
