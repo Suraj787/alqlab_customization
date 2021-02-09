@@ -15,13 +15,6 @@ app_logo_url = '/assets/alqlab_customization/images/forPR.png'
 # Includes in <head>
 # ------------------
 
-scheduler_events = {
-    "cron": {
-        "* * * * *": [
-            "frappe.email.queue.flush"
-        ]
-    }
-}
 # include js, css files in header of desk.html
 # app_include_css = "/assets/alqlab_customization/css/alqlab_customization.css"
 # app_include_js = "/assets/alqlab_customization/js/alqlab_customization.js"
