@@ -34,7 +34,6 @@ app_logo_url = '/assets/alqlab_customization/images/forPR.png'
 
 # Home Pages
 # ----------
-
 # application home page (will override Website Settings)
 # home_page = "login"
 
