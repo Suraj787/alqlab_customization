@@ -17,6 +17,13 @@ class MaterialOrder(Document):
 			todo.owner=self.purchaser
 			todo.save()
 
+			ds=frappe.new_doc('DocShare')
+			ds.description=self.material_request_type
+			ds.share_doctype='Material Order'
+			ds.share_name=self.name
+			ds.user=self.purchaser
+			ds.save()
+
 
 @frappe.whitelist()
 def make_purchase_order(source_name, target_doc=None):
