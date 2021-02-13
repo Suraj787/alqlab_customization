@@ -22,6 +22,7 @@ class MaterialOrder(Document):
 			ds.share_doctype='Material Order'
 			ds.share_name=self.name
 			ds.user=self.purchaser
+			ds.read=1
 			ds.save()
 
 
