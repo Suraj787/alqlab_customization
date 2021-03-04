@@ -85,36 +85,6 @@ frappe.provide('frappe.ui.form');
                 var values = me.update_doc();
                 $.extend(me.get_variant_fields(), values);
                 me.insert(me.get_variant_fields());
-                // frappe.call({
-                //     method: "alqlab_customization.alqlab.doctype.supplier.create_address_and_contact",
-                //     args: {
-                //         doc: me.dialog.doc
-                //     },
-                //     callback: function(r) {
-                //         console.log('***********************')
-                        // me.dialog.hide();
-                        // // delete the old doc
-                        // frappe.model.clear_doc(me.dialog.doc.doctype, me.dialog.doc.name);
-                        // me.dialog.doc = r.message;
-                        // if (frappe._from_link) {
-                        //     frappe.ui.form.update_calling_link(me.dialog.doc);
-                        // } else {
-                        //     if (me.after_insert) {
-                        //         me.after_insert(me.dialog.doc);
-                        //     } else {
-                        //         me.open_form_if_not_list();
-                        //     }
-                        // }
-                //     },
-                //     error: function() {
-                //         me.open_doc();
-                //     },
-                //     always: function() {
-                //         me.dialog.working = false;
-                //         resolve(me.dialog.doc);
-                //     },
-                //     freeze: true
-                // });
             })
         }
 	});
