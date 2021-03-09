@@ -82,7 +82,11 @@ app_include_js = "/assets/alqlab_customization/js/supplierQuickEntry.js"
 doc_events = {
 	"Supplier": {
 		"on_update": "alqlab_customization.alqlab.doctype.supplier.create_address_and_contact",
+	},
+	"Purchase Invoice":{
+		"validate":"alqlab_customization.alqlab.doctype.purchase_invoice.validate",
 	}
+	
 }
 
 # Scheduled Tasks

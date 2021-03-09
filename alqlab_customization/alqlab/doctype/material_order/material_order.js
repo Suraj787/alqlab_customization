@@ -3,7 +3,7 @@
 
 frappe.ui.form.on('Material Order', {
 	refresh: function(frm) {
-		if(!frm.doc.__islocal) {
+		if(!frm.doc.__islocal && frm.doc.docstatus==1) {
 			frm.add_custom_button(__('Purchase Order'), function() {
 				frappe.model.open_mapped_doc({
 					method: "alqlab_customization.alqlab.doctype.material_order.material_order.make_purchase_order",
@@ -14,7 +14,13 @@ frappe.ui.form.on('Material Order', {
 				frappe.model.open_mapped_doc({
 					method: "alqlab_customization.alqlab.doctype.material_order.material_order.make_supplier_quotation",
 					frm: frm
-				})
+				});
+			}, __('Create'))
+			frm.add_custom_button(__('Purchase Invoice'), function() {
+				frappe.model.open_mapped_doc({
+					method: "alqlab_customization.alqlab.doctype.material_order.material_order.make_purchase_invoice",
+					frm: frm,
+				});
 			}, __('Create'))
 		}
 	}
