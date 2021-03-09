@@ -46,3 +46,15 @@ def make_supplier_quotation(source_name, target_doc=None):
 	}, target_doc)
 
 	return doclist
+
+@frappe.whitelist()
+def make_purchase_invoice(source_name, target_doc=None):
+	doclist = get_mapped_doc("Material Order", source_name, {
+		"Material Order": {
+			"doctype": "Purchase Invoice",
+		}
+	}, target_doc)
+
+	return doclist
+	
+	
