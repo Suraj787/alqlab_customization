@@ -31,7 +31,9 @@ app_include_js = "/assets/alqlab_customization/js/supplierQuickEntry.js"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-
+doctype_js = {
+				"Payment Request":"public/js/payment_request.js"
+}
 # Home Pages
 # ----------
 # application home page (will override Website Settings)
