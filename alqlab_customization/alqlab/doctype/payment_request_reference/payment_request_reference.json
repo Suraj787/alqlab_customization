@@ -1,0 +1,140 @@
+{
+ "creation": "2021-03-22 13:41:01.425269",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "cost_center",
+  "description",
+  "reference_doctype",
+  "reference_name",
+  "due_date",
+  "bill_no",
+  "payment_term",
+  "column_break_4",
+  "total_amount",
+  "outstanding_amount",
+  "allocated_amount",
+  "exchange_rate"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "width": "50px"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "width": "10px"
+  },
+  {
+   "columns": 2,
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description",
+   "width": "10px"
+  },
+  {
+   "columns": 2,
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "DocType",
+   "reqd": 1,
+   "width": "10px"
+  },
+  {
+   "columns": 2,
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Name",
+   "options": "reference_doctype",
+   "reqd": 1,
+   "width": "10px"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bill_no",
+   "fieldtype": "Data",
+   "label": "Supplier Invoice No",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_term",
+   "fieldtype": "Link",
+   "label": "Payment Term",
+   "options": "Payment Term"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 3,
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Amount",
+   "print_hide": 1,
+   "read_only": 1,
+   "width": "10px"
+  },
+  {
+   "columns": 3,
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Outstanding",
+   "read_only": 1,
+   "width": "10px"
+  },
+  {
+   "columns": 4,
+   "fieldname": "allocated_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Allocated",
+   "width": "50px"
+  },
+  {
+   "depends_on": "eval:(doc.reference_doctype=='Purchase Invoice')",
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-03-31 13:25:34.899658",
+ "modified_by": "Administrator",
+ "module": "alqlab",
+ "name": "Payment Request Reference",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
