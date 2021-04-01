@@ -20,13 +20,12 @@
  ],
  "fields": [
   {
-   "columns": 2,
    "fieldname": "project",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Project",
-   "options": "Project",
-   "width": "50px"
+   "length": 2,
+   "options": "Project"
   },
   {
    "columns": 1,
@@ -127,7 +126,7 @@
   }
  ],
  "istable": 1,
- "modified": "2021-03-31 13:25:34.899658",
+ "modified": "2021-04-01 12:26:36.090816",
  "modified_by": "Administrator",
  "module": "alqlab",
  "name": "Payment Request Reference",
