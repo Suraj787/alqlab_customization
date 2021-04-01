@@ -387,7 +387,7 @@ frappe.ui.form.on('Payment Request', {
 		if (frm.doc.posting_date && (frm.doc.paid_from||frm.doc.paid_to)) {
 			return frappe.call({
 				method:'alqlab_customization.alqlab.doctype.payment_request.get_party_and_account_balance', 
-
+                
 				args: {
 					company: frm.doc.company,
 					date: frm.doc.posting_date,
