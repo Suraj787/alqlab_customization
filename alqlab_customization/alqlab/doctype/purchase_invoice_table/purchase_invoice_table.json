@@ -1,0 +1,67 @@
+{
+ "creation": "2021-04-02 16:09:28.341151",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "purchase_invoice",
+  "posting_date",
+  "supplier",
+  "project",
+  "currency",
+  "grand_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Purchase Invoice ",
+   "options": "Purchase Invoice"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grand Total"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-04-03 19:50:01.434818",
+ "modified_by": "Administrator",
+ "module": "alqlab",
+ "name": "Purchase Invoice Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

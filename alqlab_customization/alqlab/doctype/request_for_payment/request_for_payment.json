@@ -1,0 +1,63 @@
+{
+ "creation": "2021-04-02 16:03:39.783760",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "get_invoices",
+  "purchase_invoice_table",
+  "section_break_5",
+  "iqd_total",
+  "usd_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "iqd_total",
+   "fieldtype": "Currency",
+   "label": "IQD Total"
+  },
+  {
+   "fieldname": "usd_total",
+   "fieldtype": "Currency",
+   "label": "USD Total"
+  },
+  {
+   "fieldname": "get_invoices",
+   "fieldtype": "Button",
+   "label": "Get Invoices"
+  },
+  {
+   "fieldname": "purchase_invoice_table",
+   "fieldtype": "Table",
+   "label": "Purchase Invoice Table",
+   "options": "Purchase Invoice Table"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "modified": "2021-04-03 18:47:20.491324",
+ "modified_by": "Administrator",
+ "module": "alqlab",
+ "name": "Request For Payment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
