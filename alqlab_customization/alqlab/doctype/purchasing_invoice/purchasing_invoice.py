@@ -15,7 +15,7 @@ from erpnext.accounts.party import get_party_account, get_due_date
 from erpnext.accounts.utils import get_account_currency, get_fiscal_year
 from erpnext.stock.doctype.purchase_receipt.purchase_receipt import update_billed_amount_based_on_po
 from erpnext.stock import get_warehouse_account_map
-from erpnext.accounts.general_ledger import make_gl_entries, merge_similar_entries, delete_gl_entries
+# from erpnext.accounts.general_ledger import make_gl_entries, merge_similar_entries, delete_gl_entries
 from erpnext.accounts.doctype.gl_entry.gl_entry import update_outstanding_amt
 from erpnext.buying.utils import check_on_hold_or_closed_status
 from erpnext.accounts.general_ledger import get_round_off_account_and_cost_center
@@ -395,8 +395,8 @@ class PurchasingInvoice(BuyingController):
 				update_gl_entries_after(self.posting_date, self.posting_time,
 					warehouses, items, company = self.company)
 
-		elif self.docstatus == 2 and cint(self.update_stock) and self.auto_accounting_for_stock:
-			delete_gl_entries(voucher_type=self.doctype, voucher_no=self.name)
+		# elif self.docstatus == 2 and cint(self.update_stock) and self.auto_accounting_for_stock:
+		# 	delete_gl_entries(voucher_type=self.doctype, voucher_no=self.name)
 
 	def get_gl_entries(self, warehouse_account=None):
 		self.auto_accounting_for_stock = erpnext.is_perpetual_inventory_enabled(self.company)
